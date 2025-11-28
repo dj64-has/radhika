@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>[Your Store Name] — Student · Tax · Design Services</title>
+  <meta name="description" content="One-stop services: Student document & scheme help, Tax & Accounting (GST, Income Tax, Audits), and Graphic Design (logo, video, photo)." />
+  <meta name="theme-color" content="#0b6cf0" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="[Your Store Name] — Student · Tax · Design Services" />
+  <meta property="og:description" content="Student services, Tax & Accounting, and Creative Graphic Designing — reliable, affordable, 24x7 support." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Font (modify if desired) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#0b6cf0;
+      --muted:#6b7280;
+      --card-bg:#ffffff;
+      --page-bg:#f7f9fc;
+      --radius:14px;
+      --max-width:1100px;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:var(--page-bg);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px;}
+    header{
+      background:linear-gradient(90deg, rgba(11,108,240,0.06), rgba(11,108,240,0.02));
+      backdrop-filter: blur(6px);
+      border-radius:18px;
+      padding:16px 20px;
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:12px;
+      background:linear-gradient(180deg,var(--accent),#2a9bf8);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;
+      box-shadow:0 6px 18px rgba(11,108,240,0.12);
+    }
+    .brand h1{margin:0;font-size:18px}
+    nav{display:flex;gap:10px;align-items:center}
+    nav a{color:var(--accent);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:10px}
+    nav a.button{background:var(--accent);color:#fff}
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:20px;
+      align-items:center;
+      margin-bottom:22px;
+    }
+    .hero-card{
+      background:var(--card-bg);
+      border-radius:16px;padding:28px;
+      box-shadow:0 8px 30px rgba(12,15,30,0.04);
+    }
+    .hero h2{margin:0 0 8px 0;font-size:26px}
+    .hero p.lead{color:var(--muted);margin:0 0 18px 0}
+    .cta-row{display:flex;gap:12px;align-items:center}
+    .btn{
+      padding:10px 14px;border-radius:12px;border:0;font-weight:700;cursor:pointer;
+      background:var(--accent);color:#fff;
+    }
+    .btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(11,108,240,0.12)}
+    /* Services area */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-bottom:20px;
+    }
+    .card{
+      background:linear-gradient(180deg, #fff, #fbfdff);
+      border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(11,108,240,0.04);
+    }
+    .card h3{margin:0 0 8px 0}
+    .card ul{margin:0;padding-left:18px;color:var(--muted)}
+    .small{font-size:13px;color:var(--muted)}
+    /* Contact / form */
+    .contact{
+      display:grid;grid-template-columns:1fr 360px;gap:18px;
+    }
+    form{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+    label{display:block;font-weight:600;margin-bottom:6px}
+    input[type="text"],input[type="email"],textarea,select{
+      width:100%;padding:10px;border-radius:10px;border:1px solid #e6edf6;background:#fbfeff;margin-bottom:12px;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .meta{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .footer{
+      margin-top:22px;padding:14px;border-radius:12px;text-align:center;color:var(--muted);font-size:14px;
+    }
+    /* Responsive */
+    @media (max-width:1040px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      header{padding:12px}
+      .grid{grid-template-columns:1fr}
+      .logo{width:48px;height:48px}
+    }
+
+    /* small helpers */
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(11,108,240,0.08);color:var(--accent);font-weight:600}
+    .service-list{display:flex;flex-direction:column;gap:8px}
+    .muted{color:var(--muted)}
+    .card .price{font-weight:700;margin-top:10px}
+    .tagline{font-size:13px;color:var(--muted);margin-top:6px}
+    .badge{display:inline-block;border-radius:8px;padding:6px 8px;background:rgba(16,185,129,0.08);color:#0ea27a;font-weight:600;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">SS</div>
+        <div>
+          <h1>[Your Store Name]</h1>
+          <div class="small muted">Student • Tax • Graphic Design</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#about" class="button">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-card" role="region" aria-labelledby="hero-title">
+          <h2 id="hero-title">Fast, Reliable Services — Student, Tax & Design</h2>
+          <p class="lead">We help students with government forms, provide professional tax & accounting services (GST, Income Tax, Audit), and create logos, videos and graphics — affordable, trustworthy, and available 24×7 for queries.</p>
+
+          <div class="meta">
+            <span class="pill">Open: 24×7 Query Support</span>
+            <span class="muted">Trusted by local students & small businesses</span>
+          </div>
+
+          <div style="margin-top:18px" class="cta-row">
+            <button class="btn" onclick="openContact()">Get Started</button>
+            <button class="btn ghost" onclick="openWhatsApp()">Chat on WhatsApp</button>
+          </div>
+
+          <div class="tagline">Tip: add <strong>Tawk.to</strong> or <strong>Crisp</strong> widget to enable live chat inside this page (see instructions below).</div>
+        </div>
+
+        <aside>
+          <div style="background:linear-gradient(180deg,#fff, #f3f9ff);border-radius:14px;padding:18px;box-shadow:0 8px 26px rgba(11,108,240,0.04)">
+            <h3>Quick Service Finder</h3>
+            <p class="muted">Choose a category to see common services and starting process.</p>
+
+            <div style="margin-top:12px" class="service-list">
+              <div class="card">
+                <strong>Student Services</strong>
+                <div class="small muted">Scheme apps, name correction, employment exchange</div>
+              </div>
+              <div class="card">
+                <strong>Tax & Accounting</strong>
+                <div class="small muted">GST filing, Income Tax, Audit & bookkeeping</div>
+              </div>
+              <div class="card">
+                <strong>Graphic Design</strong>
+                <div class="small muted">Logo, photo/video editing, social media creatives</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" aria-labelledby="services-title" style="margin-bottom:18px">
+        <h2 id="services-title" style="margin:0 0 12px 0">Our Main Services</h2>
+        <p class="muted" style="margin:0 0 14px 0">We grouped services under three main categories. Click "Enquire" to prefill the contact form.</p>
+
+        <div class="grid" role="list">
+          <!-- Student -->
+          <article class="card" role="listitem" aria-labelledby="s1">
+            <h3 id="s1">Student Services</h3>
+            <p class="small muted">Help with government & academic documentation</p>
+            <ul>
+              <li>Government scheme applications (scholarships, support schemes)</li>
+              <li>Name correction in official documents (Aadhaar, school certificates)</li>
+              <li>Employment Exchange registration & guidance</li>
+              <li>PAN / Aadhaar assistance, caste/income certificates</li>
+            </ul>
+            <div class="price">Process: Guidance + Application Support</div>
+            <div style="margin-top:12px">
+              <button class="btn" onclick="prefill('Student Services')">Enquire</button>
+            </div>
+          </article>
+
+          <!-- Tax -->
+          <article class="card" role="listitem" aria-labelledby="s2">
+            <h3 id="s2">Tax & Accounting</h3>
+            <p class="small muted">GST, Income Tax, Audits, Bookkeeping</p>
+            <ul>
+              <li>GST registration & filing (monthly/quarterly)</li>
+              <li>Income Tax filing for individuals & businesses</li>
+              <li>Professional tax, TDS filings & audit support</li>
+              <li>Accounting & bookkeeping services</li>
+            </ul>
+            <div class="price">Packages: Monthly / Quarterly / Annual</div>
+            <div style="margin-top:12px">
+              <button class="btn" onclick="prefill('Tax & Accounting')">Enquire</button>
+            </div>
+          </article>
+
+          <!-- Design -->
+          <article class="card" role="listitem" aria-labelledby="s3">
+            <h3 id="s3">Graphic Designing</h3>
+            <p class="small muted">Logos, videos, photos, social content</p>
+            <ul>
+              <li>Logo & brand identity</li>
+              <li>Photo editing & restoration</li>
+              <li>Video editing & short ads</li>
+              <li>Social media banners, posters, business cards</li>
+            </ul>
+            <div class="price">Delivery: 24–72 hours (depends on scope)</div>
+            <div style="margin-top:12px">
+              <button class="btn" onclick="prefill('Graphic Designing')">Enquire</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" style="margin-bottom:18px">
+        <div class="hero-card">
+          <h3>About Us</h3>
+          <p class="muted">[Your Store Name] started to make local services simple and affordable. We combine domain expertise with friendly support — focused on students and small businesses.</p>
+          <div style="display:flex;gap:10px;margin-top:12px">
+            <div class="badge">Trusted Local Team</div>
+            <div class="pill">24×7 Query</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact & 24×7 Support</h2>
+
+        <div class="contact" style="margin-top:12px">
+          <!-- Left: form -->
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <!-- Note: Replace mailto with Formspree or Google Forms if you want to capture leads -->
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="name@example.com" />
+
+            <label for="phone">Phone / WhatsApp</label>
+            <input id="phone" name="phone" type="text" placeholder="+91 9XXXXXXXXX" />
+
+            <label for="service">Service interested in</label>
+            <select id="service" name="service">
+              <option>Student Services</option>
+              <option>Tax & Accounting</option>
+              <option>Graphic Designing</option>
+              <option>Other / Custom</option>
+            </select>
+
+            <label for="message">Message / Query</label>
+            <textarea id="message" name="message" placeholder="Tell us briefly what you need..."></textarea>
+
+            <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
+              <button class="btn" type="submit">Send Query</button>
+              <button class="btn ghost" type="button" onclick="openWhatsApp()">Chat on WhatsApp</button>
+            </div>
+
+            <p class="muted" style="margin-top:8px">We typically reply quickly — for urgent help use WhatsApp or the live chat widget (if installed).</p>
+          </form>
+
+          <!-- Right: info -->
+          <aside style="display:flex;flex-direction:column;gap:12px">
+            <div class="card">
+              <h4>Contact Info</h4>
+              <p class="small muted">Phone / WhatsApp: <strong id="phoneText">+91 9XXXXXXXXX</strong></p>
+              <p class="small muted">Email: <strong id="emailText">hello@example.com</strong></p>
+              <p class="small muted">Address: <span class="muted">[Your address]</span></p>
+            </div>
+
+            <div class="card">
+              <h4>How to get started</h4>
+              <ol style="margin:0;padding-left:18px;color:var(--muted)">
+                <li>Choose a service & send a quick message.</li>
+                <li>We reply with a checklist and estimated cost.</li>
+                <li>Share documents; we process the application and update you.</li>
+              </ol>
+            </div>
+
+            <div class="card">
+              <h4>24×7 Chat (recommended)</h4>
+              <p class="muted">Add a free widget like <strong>Tawk.to</strong> or <strong>Crisp</strong>. Place the widget script before <code>&lt;/body&gt;</code>. Example: <em>tawk.to</em> is free and easy to set up.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <div class="footer">
+        © <span id="year"></span> [Your Store Name] — Built for students & small businesses. Replace contact placeholders in the code before publishing.
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Simple helper scripts
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openContact(){
+      document.getElementById('name').focus();
+      window.scrollTo({top: document.getElementById('contact').offsetTop - 20, behavior:'smooth'});
+    }
+
+    function openWhatsApp(){
+      // Replace the phone number below with your WhatsApp number (international format without +, e.g. 919876543210)
+      const phone = '919999999999';
+      const text = encodeURIComponent('Hello, I want to enquire about your services.');
+      const url = `https://wa.me/${phone}?text=${text}`;
+      window.open(url, '_blank');
+    }
+
+    function prefill(service){
+      document.getElementById('service').value = service;
+      openContact();
+    }
+
+    // Form submit handling:
+    // By default this code will open mail client using mailto: OR you can connect to Formspree/Google Forms.
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+      const service = encodeURIComponent(document.getElementById('service').value);
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      // Option A: Open default mail client (quick demo)
+      const subject = encodeURIComponent(`[Service Enquiry] ${service} - ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\nMessage:\n${message}`);
+      window.location.href = `mailto:hello@example.com?subject=${subject}&body=${body}`;
+
+      // Option B: (Recommended for production) Use Formspree / Google Forms / Netlify Forms to collect leads.
+      // If you use Formspree, replace mailto flow with an AJAX POST to Formspree endpoint.
+    }
+  </script>
+
+  <!--
+    LIVE CHAT WIDGET (optional):
+    1) Setup a free account at tawk.to or crisp.chat
+    2) copy the widget <script> they give you and paste here before </body>
+    3) This enables 24x7 chat (with automated messages + mobile apps for your team).
+  -->
+
+</body>
+</html>
+
